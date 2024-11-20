@@ -1,4 +1,5 @@
-# Physical Interfaces / Creative Robotics / winter term 2024/2025
+# Physical Interfaces / Creative Robotics 
+winter term 2024/2025
 Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
  
 # Universal Robots Simulation (Windows only)
