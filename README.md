@@ -26,7 +26,7 @@ Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
 * video tutorial Prof. Michael Kipp: https://www.youtube.com/watch?v=sDKVHmPsEEY&t=29s
 
 # VS Code & OSC Interface
-* find scripts to read and write in subfolder of folder "python"
+* find scripts to read and write data to robot via OSC (Open Sound Control) in subfolder of folder "python"
 * Install VS Code
 * Launch VS Code from Anaconda with RTDE_OSC selected in the top of the Home tab
 * Type the following commands in the Terminal of VSCode:
