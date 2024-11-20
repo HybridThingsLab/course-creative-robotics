@@ -23,6 +23,7 @@ Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
 # Anaconda
 * Download and install Anaconda here: https://www.anaconda.com/
 * Once Anaconda is installed, open it, create a new environment and call it RTDE_OSC (make sure you are using a python version that is supported by the ur-rtde package here: https://pypi.org/project/ur-rtde/ -> 3.10 should work for Win64)
+* video tutorial Prof. Michael Kipp: https://www.youtube.com/watch?v=sDKVHmPsEEY&t=29s
 
 # VS Code & OSC Interface
 * find scripts to read and write in subfolder of folder "python"
