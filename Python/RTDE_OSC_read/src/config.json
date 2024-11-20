@@ -3,7 +3,7 @@
         {
             "ur5e_htlab":
                 {
-                    "ip": "192.168.188.120",
+                    "ip": "192.168.188.72",
                     "read_freq": 500,
                     "registered_data": ["ActualQ", "ActualQd"]
                     
