@@ -25,13 +25,12 @@ Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
 * Once Anaconda is installed, open it, create a new environment and call it RTDE_OSC (make sure you are using a python version that is supported by the ur-rtde package here: https://pypi.org/project/ur-rtde/ -> 3.10 should work for Win64)
 * video tutorial Prof. Michael Kipp: https://www.youtube.com/watch?v=sDKVHmPsEEY&t=29s
 
-# VS Code & OSC Interface
-* find scripts to read and write data to robot via OSC (Open Sound Control) in subfolder of folder "python"
-* Install VS Code
+# Visual Studio Code & OSC Interface
 * Launch VS Code from Anaconda with RTDE_OSC selected in the top of the Home tab
 * Type the following commands in the Terminal of VSCode:
     * pip install ur_rtde
     * pip install python-osc
+* Find scripts to read and write data to robot via OSC (Open Sound Control) in subfolder of folder "python" of this repository
 * In the RTDE_OSC_read folder in VSCode navigate to -> src\config.json and change the “ip” to the IP Address from URSim
 * In the RTDE_OSC_write folder in VSCode navigate to -> src\RobotController.py and change the “ip” to your IP Address from URSim
 * Open two terminal windows in VSCode side-by-side
