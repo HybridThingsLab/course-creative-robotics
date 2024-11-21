@@ -30,7 +30,7 @@ Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
 * Type the following commands in the Terminal of VSCode:
     * pip install ur_rtde
     * pip install python-osc
-* Find scripts to read and write data to robot via OSC (Open Sound Control) in subfolder of folder "python" of this repository
+* Find scripts to read and write data to robot via OSC (Open Sound Control) in subfolder of folder ["/Python"](https://github.com/HybridThingsLab/course-creative-robotics/tree/main/Python) of this repository
 * In the RTDE_OSC_read folder in VSCode navigate to -> src\config.json and change the “ip” to the IP Address from URSim
 * In the RTDE_OSC_write folder in VSCode navigate to -> src\RobotController.py and change the “ip” to your IP Address from URSim
 * Open two terminal windows in VSCode side-by-side
