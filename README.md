@@ -30,8 +30,8 @@ Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
 * Install VS Code
 * Launch VS Code from Anaconda with RTDE_OSC selected in the top of the Home tab
 * Type the following commands in the Terminal of VSCode:
-* pip install ur_rtde
-* pip install python-osc
+    * pip install ur_rtde
+    * pip install python-osc
 * In the RTDE_OSC_read folder in VSCode navigate to -> src\config.json and change the “ip” to the IP Address from URSim
 * In the RTDE_OSC_write folder in VSCode navigate to -> src\RobotController.py and change the “ip” to your IP Address from URSim
 * Open two terminal windows in VSCode side-by-side
