@@ -2,7 +2,7 @@
 winter term 2024/2025
 
 Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
- 
+
 # Universal Robots Simulation (Windows only)
 * Download and install URSim here (account necessary, but it's free): https://www.universal-robots.com/download/software-e-series/simulator-non-linux/offline-simulator-e-series-ur-sim-for-non-linux-5126-lts/
 * Unzip it to the folder of your choice
@@ -36,6 +36,7 @@ Augsburg Technical University of Applied Sciences, Prof. Andreas Muxel
 * start environment using the play button "Open Terminal"
 
 # Visual Studio Code & OSC Interface
+* download code repository, https://github.com/HybridThingsLab/course-creative-robotics/archive/refs/heads/main.zip
 * Launch VS Code from Anaconda with RTDE_OSC selected in the top of the Home tab
 * Type the following commands in the Terminal of VSCode:
     * pip install ur_rtde
