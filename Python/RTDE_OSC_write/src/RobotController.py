@@ -28,7 +28,7 @@ class RobotController(Thread):
         self.stopRequest = False
 
         #prepare robot connection
-        self.robotIP = "192.168.188.120"
+        self.robotIP = "192.168.178.86"
         self.readFreq = 500
         
 
