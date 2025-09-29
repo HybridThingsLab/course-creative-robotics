@@ -21,21 +21,29 @@ import rtde_control
 import sys
 import math
 
+import time
+
 
 class RobotController(Thread):
-    def __init__(self, dataQueue: Queue, driveRobot: bool):
+    def __init__(self, dataQueue: Queue, driveRobot: bool, docker: bool = False):
+        
+        # --- counters for loop frequency ---
+        self._loop_counter = 0
+        self._last_time = time.time()
 
         self.stopRequest = False
 
         #prepare robot connection
-        self.robotIP = "192.168.178.133"
+        self.robotIP = "127.0.0.1"
+        #self.robotIP = "192.168.178.81"
         self.readFreq = 500
         
 
         self.dataQueue = dataQueue
         self.driveRobot = driveRobot
         self.feedback = OSCFeedback()
-        
+        self.docker = docker
+            
         #connect to the robot
         logging.info('Connecting to robot %s', self.robotIP)
         self.rtde_c = rtde_control.RTDEControlInterface(self.robotIP)
@@ -43,7 +51,7 @@ class RobotController(Thread):
         
         #prepare runstates        
         self.stopState = StopState(RobotStateType.STOP, self.rtde_r, self.rtde_c, self.driveRobot)
-        self.servoPoseState = ServoPoseState(RobotStateType.SERVOPOSE, self.rtde_r, self.rtde_c, driveRobot)
+        self.servoPoseState = ServoPoseState(RobotStateType.SERVOPOSE, self.rtde_r, self.rtde_c, self.driveRobot, self.docker)
         self.servoJointsState = ServoJointsState(RobotStateType.SERVOJOINTS, self.rtde_r, self.rtde_c, self.driveRobot)
         self.moveJointsState = MoveJointsState(RobotStateType.MOVEJOINTS, self.rtde_r, self.rtde_c, self.driveRobot)
         self.teachModeState = TeachModeState(RobotStateType.TEACHMODE, self.rtde_r, self.rtde_c, self.driveRobot)
@@ -210,6 +218,15 @@ class RobotController(Thread):
 
                 #run my runstate
                 self.runState.run()
+                
+                # --- frequency counter ---
+                self._loop_counter += 1
+                now = time.time()
+                if now - self._last_time >= 1.0:
+                    print(f"Loop executed {self._loop_counter} times in the last second")
+                    self._loop_counter = 0
+                    self._last_time = now
+                
             else:
                 #Stop the Robot and return
                 self.changeState(self.stopState)

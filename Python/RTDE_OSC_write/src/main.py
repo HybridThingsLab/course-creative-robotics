@@ -15,6 +15,7 @@ def main(args):
     parser = argparse.ArgumentParser(description="Read startup arguments")
     parser.add_argument('--log', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], default='INFO', type=str)
     parser.add_argument("--driverobot", action='store_true')
+    parser.add_argument("--docker", action='store_true')
     parsed_args = parser.parse_args(args)    
 
     # configure loglevel based on arguments
@@ -31,7 +32,7 @@ def main(args):
     queue = Queue(maxsize=1)
 
     global robot_controller
-    robot_controller = RobotController(queue, vars(parsed_args)['driverobot'])
+    robot_controller = RobotController(queue, vars(parsed_args)['driverobot'], vars(parsed_args)['docker'])
     robot_controller.startRobotControl()
 
     #TODO: osc_receiver is not written here - i guess because of blocking thread. Need to rewrite OSCReceiver to be nice and threaded
