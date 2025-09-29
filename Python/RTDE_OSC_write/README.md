@@ -29,11 +29,8 @@ For safety purposes, controlmessages are not sent to the robot, until you start 
 
 `python main.py --driverobot` will actually move the robot
 
-### docker support macOS (optional)
-... more infos soon
-
-#### Example:
-`python main.py --driverobot --docker` delay added in loop to run in docker (quick&dirty fix)
+### Docker support macOS (optional)
+`python main.py --driverobot --docker` delay added in loop to run in docker (quick&dirty fix )
 
 
 ## OSC messages and modes
