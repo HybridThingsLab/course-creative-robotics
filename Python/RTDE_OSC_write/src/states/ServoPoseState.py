@@ -40,7 +40,8 @@ class ServoPoseState(RobotState):
         
         t_start = self.rtde_c.initPeriod()
         
-        #logging.debug("IK solution: %r", self.rtde_c.getInverseKinematicsHasSolution(self.robotPose))
+        if(not self.docker):
+            logging.debug("IK solution: %r", self.rtde_c.getInverseKinematicsHasSolution(self.robotPose))
 
         # check whether pose is wihtin safety limits
         if (not self.rtde_c.isPoseWithinSafetyLimits(self.robotPose)):
